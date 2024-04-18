@@ -22,4 +22,12 @@ Article = Table(
     Column("description", String(500))
 )
 
+User = Table(
+'users',
+    metadata,
+    Column("id", Integer, primary_key=True),
+    Column("username", String(50)),
+    Column("password", String(500))
+)
+
 database = Database(DATABASE_URL)
